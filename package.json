@@ -1,0 +1,22 @@
+{
+  "name": "node-red-contrib-blynk-mg",
+  "version": "1.0.0",
+  "description": "Node-red node to write in blynk App components",
+  "main": "index.js",
+  "keywords": [
+    "node-red"
+  ],
+  "node-red": {
+    "nodes": {
+      "lower-case": "src/blynk-write.js"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "blynk-library": "^0.5.4"
+  }
+}
