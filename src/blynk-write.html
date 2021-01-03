@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    RED.nodes.registerType('blynk-write',{
+        category: 'blynk mg',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            server: {value:"blynk-cloud.com"},
+            port: {value:"8442"},
+            token: {value:""},
+        },
+        inputs:1,
+        outputs:1,
+        icon: "feed.png",
+        label: function() {
+            return this.name||"lower-case";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="blynk-write">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-server"><i class="fa fa-tag"></i> server</label>
+        <input type="text" id="node-input-server" placeholder="blynk-cloud.com">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="fa fa-tag"></i> Port</label>
+        <input type="text" id="node-input-port" placeholder="8442">
+    </div>
+    <div class="form-row">
+        <label for="node-input-token"><i class="fa fa-tag"></i> Token</label>
+        <input type="text" id="node-input-token">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="blynk-write">
+    <p>A simple node that transmits messages payloads to blynk apps</p>
+</script>
