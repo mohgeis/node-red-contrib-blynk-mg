@@ -14,8 +14,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Mohamed Geis",
+  "license": "MIT",
+  "homepage": "https://github.com/mohgeis/node-red-contrib-blynk-mg",
   "dependencies": {
     "blynk-library": "^0.5.4"
   }
