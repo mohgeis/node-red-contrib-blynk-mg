@@ -18,15 +18,19 @@ msg = {
   When the above message is recieved, the node will send the payload 4 messages, to the pin list, one for each pin. all messages will be sent to each token in the msg.token list.
   If msg.payload is longer than msg.pin => the node will send the first payload messages until pins list is used.
   
-  | msg.payload | pl-0                    | pl-1                   | pl-2 | pl-3 |
-  | msg.pin     | 0                       | 1                      | 2    | 3    |
-  | result      | send 'pl-0'  to v-pin-0 | send 'pl-1' to v-pin-1 | -    | -    |
+  | list        | v 1                     |  v 2                   |  v 3 | v 4  |
+  |-------------|-------------------------|------------------------|------|------|
+  | msg.payload | pl_0                    | pl_1                   | pl_2 | pl_3 |
+  | msg.pin     | 0                       | 1                      |      |      |
+  | result      | send 'pl_0'  to v_pin_0 | send 'pl_1' to v_pin_1 |      |      |
 
   if msg.pin is longer than payload => the node will send 0 for the pins that has no match in payload list.
   
-  | msg.payload | pl-0                    | pl-1                   |                    |                    |
+  | list        | v 1                     | v 2                    | v 3                | v 4                |
+  |-------------|-------------------------|------------------------|--------------------|--------------------|
+  | msg.payload | pl_0                    | pl_1                   |                    |                    |
   | msg.pin     | 0                       | 1                      | 2                  | 3                  |
-  | result      | send 'pl-0'  to v-pin-0 | send 'pl-1' to v-pin-1 | send 0 to  v-pin-2 | send 0 to  v-pin-3 |
+  | result      | send 'pl_0'  to v_pin_0 | send 'pl_1' to v_pin_1 | send 0 to  v_pin_2 | send 0 to  v_pin_3 |
 
 # Installation
 in the (Node-red)[] installation directory run this command:
