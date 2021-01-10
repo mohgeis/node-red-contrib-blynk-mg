@@ -39,12 +39,34 @@ msg = {
   ![config_diag](./config_diagrams.PNG)
 
 # Installation
-in the (Node-red)[] installation directory run this command:
+
+### Install using Node-Red Palette
+Open Node-Red and go to Node-Red user settings -> Palette -> Install tab.
+Search for ‘node-red-contrib-blynk-mg’.
+click install and wait for the installation to complete.
+
+### Install using npm repo
+in the Node-red installation directory run this command:
 
 ```
 $ npm i node-red-contrib-blynk-mg
 ```
+This will download the packages from [npm](https://www.npmjs.com/package/node-red-contrib-blynk-mg) package manager. After that you need to stop and start Node-Red instance and refresh it's page.
 
+### Install from local source code directory
+Alternatively, to deploy the node from the source code directly flow these steps:
+```
+$ git clone https://github.com/mohgeis/node-red-contrib-blynk-mg.git
+```
+then go to the node-red directory
+```
+$ cd <Node-Red-Dir>
+```
+and install the package by refering to the directory where you cloned the repo:
+```
+$ npm install <.../clone-dir/node-red-contrib-blynk-mg>
+```
+After that you need to stop and start Node-Red instance and refresh it's page.
 
 # Todos for next releases
 
